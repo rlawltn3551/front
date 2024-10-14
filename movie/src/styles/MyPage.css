@@ -1,0 +1,158 @@
+.mypage {
+  padding: 20px;
+  max-width: 60%;
+  margin: 50px auto;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+
+.mypage h2 {
+  font-size: 2.5rem;
+  color: #f9f9f9;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* 리뷰 목록 스타일 */
+.mypage ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mypage li {
+  display: flex;
+  align-items: flex-start; /* 아이템들을 수평으로 정렬 */
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.mypage li img {
+  width: 200px; /* 이미지 크기 */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px; /* 이미지와 내용 간 간격 추가 */
+}
+
+/* 영화 제목을 더 크게 */
+.mypage h3 {
+  font-size: 2rem; /* 영화 제목 크기 */
+  margin: 0;
+  color: #f9f9f9;
+  margin-bottom: 15px; /* 리뷰 내용과 제목 사이 간격 */
+}
+
+.mypage .review-content {
+  font-size: 1.5rem; /* 리뷰 내용 크기 */
+  color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.mypage div {
+  flex-grow: 1;
+}
+
+.mypage .buttons {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.mypage button {
+  margin: 5px;
+}
+/* 수정 폼 스타일 */
+.mypage form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.mypage form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 1.25rem;
+  background-color: #555;
+  color: #f9f9f9;
+}
+
+/* 관심 영화 목록 스타일 */
+.favorite-movies {
+  display: grid; /* Grid로 설정 */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* 카드의 최소 너비 설정 */
+  gap: 20px; /* 카드 사이의 간격 */
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.favorite-movie-card {
+  background-color: #333; /* 카드 배경 색상 */
+  border-radius: 8px; /* 카드 모서리 둥글게 */
+  padding: 15px; /* 카드 내부 여백 */
+  width: 200px; /* 카드의 고정 너비 설정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 카드 그림자 효과 */
+  transition: transform 0.2s; /* 마우스 오버 시 효과 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.favorite-movie-card img {
+  width: 100%; /* 이미지가 카드 전체 너비에 맞도록 */
+  border-radius: 8px; /* 이미지 모서리 둥글게 */
+}
+
+.favorite-movie-card h3 {
+  font-size: 1.5rem; /* 영화 제목 크기 */
+  color: #f9f9f9; /* 제목 색상 */
+  margin: 10px 0; /* 제목 위 아래 간격 */
+}
+
+.favorite-movie-card p {
+  font-size: 1.25rem; /* 개봉일 크기 */
+  color: #f9f9f9; /* 개봉일 색상 */
+  margin-bottom: 15px; /* 개봉일 아래 간격 */
+}
+
+/* 반응형 조정 */
+@media screen and (max-width: 1024px) {
+  .mypage {
+    max-width: 80%;
+  }
+
+  .mypage li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mypage li img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .mypage h3 {
+    font-size: 1.75rem;
+  }
+
+  .mypage .review-content {
+    font-size: 1.25rem;
+  }
+
+  .favorite-movie-card {
+    width: 220px; /* 모바일에서는 카드의 크기를 조정 */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .favorite-movie-card {
+    width: 90%; /* 모바일에서는 카드가 전체 너비의 90%를 차지하도록 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+}

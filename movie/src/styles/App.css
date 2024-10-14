@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #121212; /* 다크 배경 */
+  color: #ffffff; /* 기본 텍스트 색상 */
+}
+
+.App {
+  flex-direction: row;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  background-color: #d32f2f; /* CGV 레드 */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #b71c1c; /* 호버 시 배경색 */
+  transform: scale(1.05); /* 호버 시 크기 증가 */
+}
+
+button:disabled {
+  background-color: #555; /* 비활성 버튼 색상 */
+  cursor: not-allowed; /* 비활성 시 커서 스타일 */
+}
